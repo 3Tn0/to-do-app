@@ -1,0 +1,27 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3Tn0/to-do-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3Tn0/to-do-app/issues"
+  },
+  "homepage": "https://github.com/3Tn0/to-do-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.24"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
