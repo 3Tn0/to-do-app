@@ -1,0 +1,51 @@
+.page-wrapper {
+    height: 100%;
+    display: flex;
+}
+
+.left-menu-wrapper {
+    flex: 2;
+    background-color: #88d8b0;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-menu {
+    flex: 1;
+}
+
+.navbar-item {
+    background-color: #96ceb4;
+    border-bottom: 4px solid #ffcc5c;
+    color: #ffeead;
+    font-size: 2em;
+    padding: 10px 20px;
+}
+
+.content-wrapper {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+.navbar {
+    display: flex;
+}
+
+.title {
+}
+
+.search {
+    flex: 1;
+    background-color: #ff6f69;
+    text-align: center;
+}
+
+.logout {
+    flex: 10;
+    text-align: end;
+}

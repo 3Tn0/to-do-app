@@ -6,7 +6,7 @@ const { check, validationResult } = require('express-validator')
 const User = require('../models/User')
 const config = require('../config/index')
 
-router.post('register',
+router.post('/register',
     [
         check('email', 'Incorrect email').normalizeEmail().isEmail(),
         check('password', 'Password is too short. Minimum length is 10 characters').isLength({ min: 6 })
@@ -25,12 +25,11 @@ router.post('register',
             const candidate = await User.findOne({ email })
 
             if (candidate) {
-                return res.status(500).json({ message: `User ${email} already exists` })
+                return res.status(500).json({ message: `User already exists` })
             }
-
-            const passwordHash = await bcrypt.hash(password, 123)
+            
+            const passwordHash = await bcrypt.hash(password, 11)
             const user = new User({ email, password: passwordHash })
-
             await user.save()
 
             res.status(201).json({ message: 'User has been created' })
@@ -41,7 +40,7 @@ router.post('register',
 
     })
 
-router.post('login',
+router.post('/login',
     [
         check('email', 'Incorrect email').normalizeEmail().isEmail(),
         check('password', 'No password').exists()
@@ -80,3 +79,6 @@ router.post('login',
             res.status(500).json({ message: 'Server error on login' })
         }
     })
+
+
+module.exports = router

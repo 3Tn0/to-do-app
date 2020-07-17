@@ -1,14 +1,17 @@
 const express = require('express')
 const taskRoutes = require('./routes/tasks')
-const userRoutes = require('./routes/auth')
+const authRoutes = require('./routes/auth')
 const { DEFAULT_PORT, MONGO_URI } = require('./config/index')
 const mongoose = require('mongoose')
 
 const app = express()
 const router = express.Router()
 
-router.use('/user', userRoutes)
-router.use('/tasks', taskRoutes)
+app.use(express.json({ extended: true }))
+
+
+router.use('/auth', authRoutes)
+// router.use('/tasks', taskRoutes)
 app.use('/api/v1', router)
 
 
