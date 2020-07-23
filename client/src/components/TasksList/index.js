@@ -30,6 +30,22 @@ const mockTasks = [
         name: 'Learn Express',
         isFinished: true
     },
+    {
+        name: 'Learn Typescript',
+        isFinished: false
+    },
+    {
+        name: 'Learn Webpack',
+        isFinished: false
+    },
+    {
+        name: 'Learn MongoDB',
+        isFinished: false
+    },
+    {
+        name: 'Learn Vue',
+        isFinished: true
+    },
 ]
 
 
