@@ -14,7 +14,6 @@ export const useRoutes = isAuthenticated => {
             <Switch>
                 <Route path="/tasks" exact>
                     <Dashboard />
-
                 </Route>
                 <Redirect to="/tasks" />
             </Switch>

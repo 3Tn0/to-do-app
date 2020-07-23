@@ -5,6 +5,5 @@ export default function TasksPage() {
         <div>
             <h1>TasksPage</h1>
         </div>
-        
     )
 }

@@ -1,30 +1,21 @@
 import React from "react"
 import './style.css'
-
+import TasksList from '../TasksList'
 
 export default function Dashboard() {
 
     return (
-        <div className="page-wrapper">
-
-            <div className="left-menu-wrapper">
-                <div className='title navbar-item'>To-do list</div>
-                <div className="left-menu">
-                </div>
+        <>
+            <div className="header">
+                <div className='header__title navbar-item'>To-do list</div>
+                <div className='header__search navbar-item'>Search</div>
+                <div className='header__logout navbar-item'>Logout</div>
             </div>
+            <div className="left-menu"></div>
             <div className="content-wrapper">
-                <div className="navbar">
-                    <div className='search navbar-item'>Search</div>
-                    <div className='logout navbar-item'>Logout</div>
-                </div>
-                <div className="content">
-
-                </div>
+                <TasksList />
             </div>
-            {/* <Navbar />
-            <div className="content-wrapper">
 
-            </div> */}
-        </div>
+        </>
     )
 }
